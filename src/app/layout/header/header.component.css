@@ -4,16 +4,41 @@
   height: 72px;
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
   color: #FFFFFF;
-  padding: 0 24px;
-  z-index: 10;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  padding: 20px 50px;
+
   top: 0;
   left: 0;
   background-color: #51b3f2 !important;
   margin-left: 260px;
+}
+
+.header-bar {
+  width: calc(100% - 260px);
+}
+
+.header-search {
+  height: 30px;
+  border-radius: 4px;
+  width: 260px;
+  color: #000;
+  font-size: 14px;
+}
+
+.header-search[placeholder] {
+  padding-left: 10px;
+}
+
+.links {
+  float: right;
+  height: 14px;
+}
+
+.links span {
+  margin-left: 10px;
+  font-size: 14px;
+  line-height: 30px;
+}
+
+.links span i.iconfont {
+  margin-left: 5px;
 }
