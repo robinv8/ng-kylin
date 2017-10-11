@@ -1,0 +1,50 @@
+aside {
+  height: 100%;
+  width: 260px;
+  background-color: #fafafa;
+}
+
+.ky-logo {
+  font-size: 24px;
+  text-align: center;
+  height: 72px;
+  line-height: 72px;
+  color: #97caf2;
+}
+
+.menu li {
+  list-style: none;
+  margin-top: 8px;
+}
+
+.menu .menuitem-one span {
+  padding-left: 30px;
+  height: 30px;
+  font-size: 16px;
+  line-height: 30px;
+  display: block;
+  cursor: pointer;
+}
+
+.menu .menuitem-two {
+  height: 30px;
+  font-size: 14px;
+  line-height: 30px;
+}
+
+.menu .menuitem-two a {
+  padding-left: 60px;
+}
+
+.menu .menuitem-two a:hover {
+  background-color: #51b3f2;
+  color: #fff;
+  display: block;
+  height: 30px;
+  line-height: 30px;
+}
+
+.menu .menuitem-one span i.iconfont {
+  float: right;
+  margin-right: 20px;
+}
