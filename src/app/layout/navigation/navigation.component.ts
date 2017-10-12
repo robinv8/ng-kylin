@@ -7,7 +7,7 @@ import {Component, ElementRef, OnInit} from '@angular/core';
 })
 export class NavigationComponent implements OnInit {
 
-  open = [false, false, false, false];
+  open = [true, true, true, true];
 
   constructor() {
   }

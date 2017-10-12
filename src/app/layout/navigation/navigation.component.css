@@ -33,7 +33,7 @@ aside {
 }
 
 .menu .menuset {
-  display: none;
+  display: block;
 }
 
 .menu .menuitem-two a {
@@ -51,10 +51,6 @@ aside {
 .menu .menuitem-one span i.iconfont {
   float: right;
   margin-right: 20px;
-}
-
-.show {
-  display: block;
 }
 
 .actived {

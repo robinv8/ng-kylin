@@ -3,21 +3,21 @@
   <ul class="menu">
     <li class="menuitem-one">
       <span (click)="_toggleMenu(0)">General<i class="iconfont {{open[0]?'icon-i-arrow-copy':'icon-arrowright'}}"></i></span>
-      <ul class="menuset {{open[0]?'show':''}}">
+      <ul class="menuset {{open[0]?'':'hidden'}}">
         <li class="menuitem-two"><a routerLinkActive="actived" routerLink="/general/button">Button 按钮</a></li>
         <li class="menuitem-two"><a routerLinkActive="actived" routerLink="/general/icon">Icon 按钮</a></li>
       </ul>
     </li>
     <li class="menuitem-one">
       <span (click)="_toggleMenu(1)">Layout<i class="iconfont {{open[1]?'icon-i-arrow-copy':'icon-arrowright'}}"></i></span>
-      <ul class="menuset {{open[1]?'show':''}}">
+      <ul class="menuset {{open[1]?'':'hidden'}}">
         <li class="menuitem-two"><a routerLinkActive="actived" routerLink="/layout/grid">Grid 栅格</a></li>
         <li class="menuitem-two"><a routerLinkActive="actived" routerLink="/layout/layout">Layout 布局</a></li>
       </ul>
     </li>
     <li class="menuitem-one">
       <span (click)="_toggleMenu(2)">Navigation<i class="iconfont {{open[2]?'icon-i-arrow-copy':'icon-arrowright'}}"></i></span>
-      <ul class="menuset {{open[2]?'show':''}}">
+      <ul class="menuset {{open[2]?'':'hidden'}}">
         <li class="menuitem-two"><a routerLinkActive="actived" routerLink="/navigation/breadcrumb">Breadcrumb 面包屑</a></li>
         <li class="menuitem-two"><a routerLinkActive="actived" routerLink="/navigation/dropdown">Dropdown 下拉菜单</a></li>
         <li class="menuitem-two"><a routerLinkActive="actived" routerLink="/navigation/menu">Menu 菜单</a></li>
@@ -26,7 +26,7 @@
     </li>
     <li class="menuitem-one">
       <span (click)="_toggleMenu(3)">Data Entry<i class="iconfont {{open[3]?'icon-i-arrow-copy':'icon-arrowright'}}"></i></span>
-      <ul class="menuset {{open[3]?'show':''}}">
+      <ul class="menuset {{open[3]?'':'hidden'}}">
         <li class="menuitem-two"><a routerLinkActive="actived" routerLink="/data-entry/cascader">Cascader 级联菜单</a></li>
         <li class="menuitem-two"><a routerLinkActive="actived" routerLink="/data-entry/checkbox">Checkbox 多选框</a></li>
         <li class="menuitem-two"><a routerLinkActive="actived" routerLink="/data-entry/datepicker">DatePicker 日期选择框</a></li>
