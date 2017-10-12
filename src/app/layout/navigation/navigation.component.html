@@ -1,40 +1,40 @@
 <aside>
   <div class="ky-logo">NG-KYLIN</div>
   <ul class="menu">
-    <li class="menuitem-one"><span>General<i class="iconfont icon-i-arrow-copy"></i></span></li>
     <li class="menuitem-one">
-      <ul>
-        <li class="menuitem-two"><a href="#">Button 按钮</a></li>
-        <li class="menuitem-two"><a href="#">Icon 按钮</a></li>
+      <span (click)="_toggleMenu(0)">General<i class="iconfont {{open[0]?'icon-i-arrow-copy':'icon-arrowright'}}"></i></span>
+      <ul class="menuset {{open[0]?'show':''}}">
+        <li class="menuitem-two"><a routerLinkActive="actived" routerLink="/general/button">Button 按钮</a></li>
+        <li class="menuitem-two"><a routerLinkActive="actived" routerLink="/general/icon">Icon 按钮</a></li>
       </ul>
     </li>
-    <li class="menuitem-one"><span>Layout<i class="iconfont icon-i-arrow-copy"></i></span></li>
     <li class="menuitem-one">
-      <ul>
-        <li class="menuitem-two"><a href="#">Grid 栅格</a></li>
-        <li class="menuitem-two"><a href="#">Layout 布局</a></li>
+      <span (click)="_toggleMenu(1)">Layout<i class="iconfont {{open[1]?'icon-i-arrow-copy':'icon-arrowright'}}"></i></span>
+      <ul class="menuset {{open[1]?'show':''}}">
+        <li class="menuitem-two"><a routerLinkActive="actived" routerLink="/layout/grid">Grid 栅格</a></li>
+        <li class="menuitem-two"><a routerLinkActive="actived" routerLink="/layout/layout">Layout 布局</a></li>
       </ul>
     </li>
-    <li class="menuitem-one"><span>Navigation<i class="iconfont icon-i-arrow-copy"></i></span></li>
     <li class="menuitem-one">
-      <ul>
-        <li class="menuitem-two"><a href="#">Breadcrumb 面包屑</a></li>
-        <li class="menuitem-two"><a href="#">Dropdown 下拉菜单</a></li>
-        <li class="menuitem-two"><a href="#">Menu 菜单</a></li>
-        <li class="menuitem-two"><a href="#">Pagination 分页</a></li>
+      <span (click)="_toggleMenu(2)">Navigation<i class="iconfont {{open[2]?'icon-i-arrow-copy':'icon-arrowright'}}"></i></span>
+      <ul class="menuset {{open[2]?'show':''}}">
+        <li class="menuitem-two"><a routerLinkActive="actived" routerLink="/navigation/breadcrumb">Breadcrumb 面包屑</a></li>
+        <li class="menuitem-two"><a routerLinkActive="actived" routerLink="/navigation/dropdown">Dropdown 下拉菜单</a></li>
+        <li class="menuitem-two"><a routerLinkActive="actived" routerLink="/navigation/menu">Menu 菜单</a></li>
+        <li class="menuitem-two"><a routerLinkActive="actived" routerLink="/navigation/pagination">Pagination 分页</a></li>
       </ul>
     </li>
-    <li class="menuitem-one"><span>Data Entry<i class="iconfont icon-i-arrow-copy"></i></span></li>
     <li class="menuitem-one">
-      <ul>
-        <li class="menuitem-two"><a href="#">Cascader 级联菜单</a></li>
-        <li class="menuitem-two"><a href="#">Checkbox 多选框</a></li>
-        <li class="menuitem-two"><a href="#">DatePicker 日期选择框</a></li>
-        <li class="menuitem-two"><a href="#">Form 表单</a></li>
-        <li class="menuitem-two"><a href="#">Input 文本输入框</a></li>
-        <li class="menuitem-two"><a href="#">Radio 单选框</a></li>
-        <li class="menuitem-two"><a href="#">Select 下拉选择框</a></li>
-        <li class="menuitem-two"><a href="#">Switch 开关</a></li>
+      <span (click)="_toggleMenu(3)">Data Entry<i class="iconfont {{open[3]?'icon-i-arrow-copy':'icon-arrowright'}}"></i></span>
+      <ul class="menuset {{open[3]?'show':''}}">
+        <li class="menuitem-two"><a routerLinkActive="actived" routerLink="/data-entry/cascader">Cascader 级联菜单</a></li>
+        <li class="menuitem-two"><a routerLinkActive="actived" routerLink="/data-entry/checkbox">Checkbox 多选框</a></li>
+        <li class="menuitem-two"><a routerLinkActive="actived" routerLink="/data-entry/datepicker">DatePicker 日期选择框</a></li>
+        <li class="menuitem-two"><a routerLinkActive="actived" routerLink="/data-entry/form">Form 表单</a></li>
+        <li class="menuitem-two"><a routerLinkActive="actived" routerLink="/data-entry/input">Input 文本输入框</a></li>
+        <li class="menuitem-two"><a routerLinkActive="actived" routerLink="/data-entry/radio">Radio 单选框</a></li>
+        <li class="menuitem-two"><a routerLinkActive="actived" routerLink="/data-entry/select">Select 下拉选择框</a></li>
+        <li class="menuitem-two"><a routerLinkActive="actived" routerLink="/data-entry/switch">Switch 开关</a></li>
       </ul>
     </li>
   </ul>

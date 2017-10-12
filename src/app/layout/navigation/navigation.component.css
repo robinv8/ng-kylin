@@ -32,6 +32,10 @@ aside {
   line-height: 30px;
 }
 
+.menu .menuset {
+  display: none;
+}
+
 .menu .menuitem-two a {
   padding-left: 60px;
 }
@@ -47,4 +51,16 @@ aside {
 .menu .menuitem-one span i.iconfont {
   float: right;
   margin-right: 20px;
+}
+
+.show {
+  display: block;
+}
+
+.actived {
+  background-color: #51b3f2;
+  color: #fff;
+  display: block;
+  height: 30px;
+  line-height: 30px;
 }
