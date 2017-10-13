@@ -1,0 +1,50 @@
+@import '../styles/default';
+
+$widgetPrefix: 'btn';
+$prefix: #{$mainPrefix}-#{$widgetPrefix};
+$primary-btn: #{$prefix}-primary;
+$default-btn: #{$prefix}-default;
+$danger-btn: #{$prefix}-danger;
+.#{$prefix}, .#{$default-btn} {
+  display: inline-block;
+  border: 1px solid transparent;
+  font-size: 14px;
+  line-height: 14px;
+  border-radius: 4px;
+  padding: 10px 15px;
+  color: rgba(0, 0, 0, .65);
+  background-color: #fff;
+  border-color: #d9d9d9;
+}
+
+.#{$primary-btn} {
+  color: $primary-text-color;
+  background-color: nth($primary-background-color, 1);
+  border-color: nth($primary-border-color, 1);
+  &:focus, &:hover {
+    color: $primary-text-color;
+    background-color: nth($primary-background-color, 2);
+    border-color: nth($primary-border-color, 2);
+    box-shadow: 0 2px 2px rgba(10, 16, 20, .24), 0 0 2px rgba(10, 16, 20, .12);
+  }
+}
+
+.#{$danger-btn} {
+  color: nth($danger-text-color, 1);
+  background-color: nth($danger-background-color, 1);
+  border-color: nth($danger-border-color, 1);
+  &:focus, &:hover {
+    color: nth($danger-text-color, 2);
+    background-color: nth($danger-background-color, 2);
+    border-color: nth($danger-border-color, 2);
+    box-shadow: 0 2px 2px rgba(10, 16, 20, .24), 0 0 2px rgba(10, 16, 20, .12);
+  }
+}
+
+button[disabled], button[disabled]:focus, button[disabled]:hover {
+  background-color: #f7f7f7;
+  border-color: #d9d9d9;
+  cursor: not-allowed;
+  color: #d5d4d4;
+  box-shadow:none;
+}

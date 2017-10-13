@@ -1,0 +1,17 @@
+@import "base";
+
+$mainPrefix: 'ky';
+$default-background-color: #fff;
+$default-border-color: #d9d9d9;
+$default-text-color: rgba(0, 0, 0, .65);
+
+/**
+ *值顺序说明 #108ee9 #49a9ee 第一个值为默认值，第二个鼠标滑过值
+ */
+$primary-background-color: #108ee9 #49a9ee;
+$primary-border-color: #108ee9 #49a9ee;
+$primary-text-color: #fff;
+
+$danger-background-color: #f7f7f7 #f04134;
+$danger-border-color: #d9d9d9 #f04134;
+$danger-text-color: #f04134 #fff;

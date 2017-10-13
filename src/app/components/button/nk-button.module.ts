@@ -1,14 +1,14 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 
-import {KyButtonComponent} from './ky-button.component';
+import {NkButtonComponent} from './nk-button.component';
 
 @NgModule({
   declarations: [
-    KyButtonComponent
+    NkButtonComponent
   ],
   exports: [
-    KyButtonComponent
+    NkButtonComponent
   ],
   imports: [CommonModule]
 })

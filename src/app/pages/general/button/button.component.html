@@ -2,15 +2,21 @@
   <h1>Buttons</h1>
   <ul class="buttons">
     <li>主要按钮</li>
-    <button ky-button>default</button>
     <li>
-      <button class="btn btn-primary">不忘初心</button>
+      <!--<button class="btn btn-primary">不忘初心</button>-->
+      <button nk-button [nkType]="'default'" [kySize]="'large'">default</button>
     </li>
     <li>
-      <button class="btn btn-primary">方得始终</button>
+      <!--<button class="btn btn-primary">方得始终</button>-->
+      <button nk-button [nkType]="'primary'" [kySize]="'large'">primary</button>
     </li>
     <li>
-      <button class="btn btn-disable">初心易得，始终难守</button>
+      <!--<button class="btn btn-disable">初心易得，始终难守</button>-->
+      <button nk-button [nkType]="'danger'" [kySize]="'large'">danger</button>
+    </li>
+    <li>
+      <!--<button class="btn btn-disable">初心易得，始终难守</button>-->
+      <button nk-button [nkType]="'primary'" [kySize]="'large'" [disabled]="false">disabled</button>
     </li>
   </ul>
   <ul class="buttons">
