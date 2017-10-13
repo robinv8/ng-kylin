@@ -4,19 +4,29 @@
     <li>主要按钮</li>
     <li>
       <!--<button class="btn btn-primary">不忘初心</button>-->
-      <button nk-button [nkType]="'default'" [kySize]="'large'">default</button>
+      <button nk-button [nkType]="'default'" [nkSize]="'large'">default</button>
     </li>
     <li>
       <!--<button class="btn btn-primary">方得始终</button>-->
-      <button nk-button [nkType]="'primary'" [kySize]="'large'">primary</button>
+      <button nk-button [nkType]="'primary'" [nkSize]="'default'">primary</button>
     </li>
     <li>
       <!--<button class="btn btn-disable">初心易得，始终难守</button>-->
-      <button nk-button [nkType]="'danger'" [kySize]="'large'">danger</button>
+      <button nk-button [nkType]="'danger'" [nkSize]="'small'">danger</button>
     </li>
     <li>
       <!--<button class="btn btn-disable">初心易得，始终难守</button>-->
-      <button nk-button [nkType]="'primary'" [kySize]="'large'" [disabled]="false">disabled</button>
+      <button nk-button [nkType]="'dashed'" [nkSize]="'small'">dashed</button>
+    </li>
+    <li>
+      <!--<button class="btn btn-disable">初心易得，始终难守</button>-->
+      <button nk-button  [disabled]="true">disabled</button>
+    </li>
+    <li>
+      <!--<button class="btn btn-disable">初心易得，始终难守</button>-->
+      <button nk-button  [disabled]="true">
+        <i class="iconfont icon-duihao"></i><span>sasa</span>
+      </button>
     </li>
   </ul>
   <ul class="buttons">

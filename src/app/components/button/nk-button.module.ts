@@ -13,5 +13,5 @@ import {NkButtonComponent} from './nk-button.component';
   imports: [CommonModule]
 })
 
-export class KyButtonModule {
+export class NkButtonModule {
 }

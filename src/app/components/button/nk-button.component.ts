@@ -7,7 +7,6 @@ import {Component, Renderer2, ElementRef, AfterContentInit, ViewEncapsulation, I
   styleUrls: ['./nk-button.component.scss']
 })
 export class NkButtonComponent implements AfterContentInit {
-
   _el: HTMLElement;
   nativeElement: HTMLElement;
   _prefixCls = 'ky-btn';
@@ -26,11 +25,11 @@ export class NkButtonComponent implements AfterContentInit {
   }
 
   @Input()
-  get kySize() {
+  get nkSize() {
     return this._size;
   }
 
-  set kySize(value: string) {
+  set nkSize(value: string) {
     this._size = value;
     this._setClass();
   }
@@ -48,10 +47,11 @@ export class NkButtonComponent implements AfterContentInit {
   _setClass(): void {
     this._classList = [
       this.nkType && `${this._prefixCls}-${this.nkType}`,
-      this.kySize && `${this._prefixCls}-${this.kySize}`
+      this.nkSize && `${this._prefixCls}-${this.nkSize}`
     ].filter(item => {
       return item;
-    })
+    });
+
     this._classList.forEach(_className => {
       this._renderer.addClass(this._el, _className);
     });

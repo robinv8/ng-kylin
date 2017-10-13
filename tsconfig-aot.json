@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "es2015",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "outDir": "./aot/src",
+    "baseUrl": "./",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "lib": ["es2015", "dom"],
+    "noImplicitAny": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "typeRoots": [
+      "../node_modules/@types/"
+    ]
+  },
+
+  "files": [
+    "src/app/components/ng-kylin.module.ts"
+  ],
+
+  "angularCompilerOptions": {
+    "genDir": "aot",
+    "skipMetadataEmit" : true
+  }
+}
