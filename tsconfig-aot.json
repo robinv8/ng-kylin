@@ -1,27 +1,25 @@
 {
+  "extends": "./tsconfig.json",
   "compilerOptions": {
-    "target": "es5",
-    "module": "es2015",
-    "moduleResolution": "node",
-    "sourceMap": true,
-    "outDir": "./aot/src",
+    "outDir": "./publish/src",
     "baseUrl": "./",
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "lib": ["es2015", "dom"],
-    "noImplicitAny": true,
-    "suppressImplicitAnyIndexErrors": true,
-    "typeRoots": [
-      "../node_modules/@types/"
+    "declaration": true,
+    "importHelpers": true,
+    "module": "es2015",
+    "sourceMap": false,
+    "target": "es2015",
+    "types": [
+      "node"
     ]
   },
-
   "files": [
-    "src/app/components/ng-kylin.module.ts"
+    "./src/__gen_components/ng-kylin.module.ts"
   ],
-
   "angularCompilerOptions": {
-    "genDir": "aot",
-    "skipMetadataEmit" : true
+    "annotateForClosureCompiler": true,
+    "strictMetadataEmit": true,
+    "flatModuleOutFile": "index.js",
+    "flatModuleId": "ng-kylin",
+    "skipTemplateCodegen": true
   }
 }
