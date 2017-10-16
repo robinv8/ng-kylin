@@ -13,7 +13,7 @@
     ]
   },
   "files": [
-    "./src/__gen_components/ng-kylin.module.ts"
+    "./src/temp_components/ng-kylin.module.ts"
   ],
   "angularCompilerOptions": {
     "annotateForClosureCompiler": true,

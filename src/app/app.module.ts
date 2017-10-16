@@ -3,16 +3,15 @@ import {NgModule} from '@angular/core';
 
 import {AppComponent} from './app.component';
 import {routing} from './app.routing';
-import {NgKylinModule} from '../../publish/src';
-
+import {NgKylinModule} from '../index.show';
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
     BrowserModule,
-    routing,
-    NgKylinModule
+    NgKylinModule,
+    routing
   ],
   providers: [],
   bootstrap: [AppComponent]

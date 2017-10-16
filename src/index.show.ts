@@ -1,1 +1,1 @@
-export * from './app/components/ng-kylin.module';
+export * from '../publish';

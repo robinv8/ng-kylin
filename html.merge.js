@@ -1,5 +1,6 @@
 let fs = require('fs');
 let pathUtil = require('path');
+let sass = require('node-sass');
 let filePath = pathUtil.join(__dirname, 'src', 'temp_components');
 
 let fileArray = [];
@@ -12,10 +13,13 @@ function fildFile(path) {
     if (/\.html$/.test(path)) {
       fileArray[1] = readFile(path)
     }
+    if (/\.component.scss$/.test(path)) {
+      fileArray[2] = path;
+    }
   } else if (fs.statSync(path).isDirectory()) {
     let paths = fs.readdirSync(path);
 
-    if (fileArray.length === 2) {
+    if (fileArray.length === 3) {
       writeFile(fileArray);
       fileArray = [];
     }
@@ -28,34 +32,72 @@ function fildFile(path) {
 
 function readFile(file) {
   return fs.readFileSync(file);
-
 }
 
 function writeFile(fileArray) {
   let file = fileArray[0];
   let content = fileArray[1];
-  mergeContent(file, content);
-  /*fs.writeFile(file, content, function (err) {
-    if (err) console.error(err);
-    console.log('数据写入的数据');
-    console.log('-------------------');
-  })*/
+  let scssPath = fileArray[2];
+  mergeContent(file, content, scssPath)
+    .then(result => {
+      if (!result) return;
+      fs.writeFile(file, result, function (err) {
+        if (err) console.error(err);
+        console.log('file merge success!');
+      })
+    });
 
 }
 
-function mergeContent(file, content) {
-  let componentContent = readFile(file);
-  var htmlRegex = /templateUrl *:(\s*\'||\"[#]*?\' *,||\" *,)/g;
-  console.log(componentContent.toString())
-  var test=componentContent.toString().match(htmlRegex)
-
-  if (htmlRegex.test(componentContent)) {
-    let contentTemp = componentContent.toString().replace(htmlRegex, (match, urls) => {
-      return "template:" + url;
+/**
+ * 转换scss
+ * @param path
+ * @returns {Promise}
+ */
+function processScss(path) {
+  return new Promise((resolve, reject) => {
+    sass.render({
+      file: path
+    }, (err, result) => {
+      if (!err) {
+        resolve(result.css.toString())
+      } else {
+        reject(err);
+      }
     })
+  })
+}
+
+function mergeContent(file, content, scssPath) {
+  let componentContent = readFile(file);
+  let htmlRegex = /(templateUrl *:\s*[\"|\'])(.*[\"|\']\,?)/g;
+  let scssRegex = /(styleUrls *:\s*)(\[.*\]\,?)/g;
+
+  let newContent = '';
+  if (htmlRegex.test(componentContent) && scssRegex.test(componentContent)) {
+    let contentArray = componentContent.toString().split(htmlRegex);
+    contentArray[1] = 'template:`';
+    contentArray[2] = content + '`,';
+    contentArray.forEach(con => {
+      newContent += con;
+    })
+    contentArray = newContent.toString().split(scssRegex);
+
+    return new Promise((resolve, reject) => {
+      processScss(scssPath)
+        .then(result => {
+          newContent = '';
+          contentArray[1] = 'styles:[`';
+          contentArray[2] = result + '`],';
+          contentArray.forEach(con => {
+            newContent += con;
+          })
+          resolve(newContent)
+        }, err => {
+          reject(err);
+        })
+    });
   }
-
-
 }
 
 fildFile(filePath);

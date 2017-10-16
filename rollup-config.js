@@ -4,10 +4,10 @@ import uglify      from 'rollup-plugin-uglify';
 
 export default {
   entry: './publish/src/ng-kylin.module.js',
-  dest: './publish/src/build.js', // output a single application bundle
+  dest: './publish/bundles/build.js', // output a single application bundle
   sourceMap: false,
   name:'ngKylin',
-  format: 'iife',
+  format: 'umd',
   onwarn: function(warning) {
     // Skip certain warnings
 
