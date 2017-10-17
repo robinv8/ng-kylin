@@ -2,7 +2,7 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {ButtonComponent} from './button.component';
 import {RouterModule} from '@angular/router';
-//import {NgKylinModule} from '../../../../index.show';
+import {NgKylinModule} from '../../../../index.show';
 
 const BUTTON_ROUTE = [
   {path: '', component: ButtonComponent}
@@ -11,7 +11,7 @@ const BUTTON_ROUTE = [
 @NgModule({
   imports: [
     CommonModule,
-    //NgKylinModule,
+    NgKylinModule,
     RouterModule.forChild(BUTTON_ROUTE)
   ],
   declarations: [

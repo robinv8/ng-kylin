@@ -8,9 +8,13 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "build:aot": "bash ./build.sh",
+    "win-build:aot": "build.sh"
   },
-  "main": "./bundles/build.js",
+  "main": "./bundles/ng-kylin.umd.js",
+  "module": "./esm5/index.js",
+  "es2015": "./esm15/index.js",
   "private": true,
   "dependencies": {
     "@angular/animations": "^4.0.0",
@@ -51,9 +55,11 @@
     "rollup": "^0.50.0",
     "rollup-plugin-commonjs": "^8.2.1",
     "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-plugin-replace": "^2.0.0",
     "rollup-plugin-uglify": "^2.0.1",
     "ts-node": "~3.0.4",
     "tslint": "~5.3.2",
-    "typescript": "~2.3.3"
+    "typescript": "~2.3.3",
+    "uglify-js": "^3.1.4"
   }
 }

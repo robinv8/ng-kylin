@@ -1,4 +1,4 @@
-import {NgModule} from '@angular/core';
+import {NgModule, ModuleWithProviders} from '@angular/core';
 
 import {NkButtonModule} from './button/nk-button.module';
 
@@ -16,5 +16,4 @@ export {NkButtonComponent} from './button/nk-button.component';
 })
 
 export class NgKylinModule {
-
 }
