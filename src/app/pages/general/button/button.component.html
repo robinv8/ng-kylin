@@ -15,18 +15,23 @@
       <button nk-button [nkType]="'dashed'" [nkSize]="'small'">dashed</button>
     </li>
     <li>
-      <button nk-button  [disabled]="true">disabled</button>
+      <button nk-button [disabled]="true" [nkSize]="'small'">disabled</button>
     </li>
     <li>
-      <button nk-button  [disabled]="true">
-        <i class="iconfont icon-duihao"></i><span>icon-disabled</span>
+      <button nk-button [nkSize]="'small'">
+        <i class="iconfont icon-duihao"></i><span>icon</span>
+      </button>
+    </li>
+    <li>
+      <button nk-button [nkSize]="'small'" [nkShape]="'circle'">
+        <i class="iconfont icon-duihao"></i>
       </button>
     </li>
   </ul>
   <ul class="buttons">
     <li>中按钮</li>
     <li>
-      <button nk-button [nkType]="'default'" [nkSize]="'default'">default</button>
+      <button nk-button [nkType]="'default'">default</button>
     </li>
     <li>
       <button nk-button [nkType]="'primary'" [nkSize]="'default'">primary</button>
@@ -38,11 +43,16 @@
       <button nk-button [nkType]="'dashed'" [nkSize]="'default'">dashed</button>
     </li>
     <li>
-      <button nk-button  [disabled]="true">disabled</button>
+      <button nk-button [disabled]="true">disabled</button>
     </li>
     <li>
-      <button nk-button  [disabled]="true">
-        <i class="iconfont icon-duihao"></i><span>icon-disabled</span>
+      <button nk-button [nkSize]="'default'">
+        <i class="iconfont icon-duihao"></i><span>icon</span>
+      </button>
+    </li>
+    <li>
+      <button nk-button [nkShape]="'circle'">
+        <i class="iconfont icon-duihao"></i>
       </button>
     </li>
   </ul>
@@ -61,11 +71,16 @@
       <button nk-button [nkType]="'dashed'" [nkSize]="'large'">dashed</button>
     </li>
     <li>
-      <button nk-button  [disabled]="true">disabled</button>
+      <button nk-button [disabled]="true">disabled</button>
     </li>
     <li>
-      <button nk-button  [disabled]="true">
-        <i class="iconfont icon-duihao"></i><span>icon-disabled</span>
+      <button nk-button [nkSize]="'large'">
+        <i class="iconfont icon-duihao"></i><span>icon</span>
+      </button>
+    </li>
+    <li>
+      <button nk-button [nkType]="'primary'" [nkSize]="'large'" [nkShape]="'circle'">
+        <i class="iconfont icon-duihao"></i>
       </button>
     </li>
   </ul>

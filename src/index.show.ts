@@ -1,10 +1,10 @@
 /*
  * test
  */
-export * from './app/components/ng-kylin.module'
+export * from './app/components/ng-kylin.module';
 
 
 /*
  * release
  */
-//export * from '../publish';
+// export * from '../publish';
