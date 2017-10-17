@@ -38,6 +38,7 @@ aside {
 
 .menu .menuitem-two a {
   padding-left: 60px;
+  text-decoration: none;
 }
 
 .menu .menuitem-two a:hover {

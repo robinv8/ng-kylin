@@ -1,68 +1,72 @@
 <section class="content">
   <h1>Buttons</h1>
   <ul class="buttons">
-    <li>主要按钮</li>
+    <li>小按钮</li>
     <li>
-      <!--<button class="btn btn-primary">不忘初心</button>-->
-      <button nk-button [nkType]="'default'" [nkSize]="'large'">default</button>
+      <button nk-button [nkType]="'default'" [nkSize]="'small'">default</button>
     </li>
     <li>
-      <!--<button class="btn btn-primary">方得始终</button>-->
-      <button nk-button [nkType]="'primary'" [nkSize]="'default'">primary</button>
+      <button nk-button [nkType]="'primary'" [nkSize]="'small'">primary</button>
     </li>
     <li>
-      <!--<button class="btn btn-disable">初心易得，始终难守</button>-->
       <button nk-button [nkType]="'danger'" [nkSize]="'small'">danger</button>
     </li>
     <li>
-      <!--<button class="btn btn-disable">初心易得，始终难守</button>-->
       <button nk-button [nkType]="'dashed'" [nkSize]="'small'">dashed</button>
     </li>
     <li>
-      <!--<button class="btn btn-disable">初心易得，始终难守</button>-->
       <button nk-button  [disabled]="true">disabled</button>
     </li>
     <li>
-      <!--<button class="btn btn-disable">初心易得，始终难守</button>-->
       <button nk-button  [disabled]="true">
-        <i class="iconfont icon-duihao"></i><span>sasa</span>
+        <i class="iconfont icon-duihao"></i><span>icon-disabled</span>
       </button>
     </li>
   </ul>
   <ul class="buttons">
-    <li>次要按钮</li>
+    <li>中按钮</li>
     <li>
-      <button class="btn">不忘初心</button>
+      <button nk-button [nkType]="'default'" [nkSize]="'default'">default</button>
     </li>
     <li>
-      <button class="btn">方得始终</button>
+      <button nk-button [nkType]="'primary'" [nkSize]="'default'">primary</button>
     </li>
     <li>
-      <button class="btn btn-disable">初心易得，始终难守</button>
+      <button nk-button [nkType]="'danger'" [nkSize]="'default'">danger</button>
+    </li>
+    <li>
+      <button nk-button [nkType]="'dashed'" [nkSize]="'default'">dashed</button>
+    </li>
+    <li>
+      <button nk-button  [disabled]="true">disabled</button>
+    </li>
+    <li>
+      <button nk-button  [disabled]="true">
+        <i class="iconfont icon-duihao"></i><span>icon-disabled</span>
+      </button>
     </li>
   </ul>
   <ul class="buttons">
-    <li>危险按钮</li>
+    <li>大按钮</li>
     <li>
-      <button class="btn btn-danger">不忘初心</button>
+      <button nk-button [nkType]="'default'" [nkSize]="'large'">default</button>
     </li>
     <li>
-      <button class="btn btn-danger">方得始终</button>
+      <button nk-button [nkType]="'primary'" [nkSize]="'large'">primary</button>
     </li>
     <li>
-      <button class="btn btn-disable">初心易得，始终难守</button>
-    </li>
-  </ul>
-  <ul class="buttons">
-    <li>虚线按钮</li>
-    <li>
-      <button class="btn btn-dashed">不忘初心</button>
+      <button nk-button [nkType]="'danger'" [nkSize]="'large'">danger</button>
     </li>
     <li>
-      <button class="btn btn-dashed">方得始终</button>
+      <button nk-button [nkType]="'dashed'" [nkSize]="'large'">dashed</button>
     </li>
     <li>
-      <button class="btn btn-disable">初心易得，始终难守</button>
+      <button nk-button  [disabled]="true">disabled</button>
+    </li>
+    <li>
+      <button nk-button  [disabled]="true">
+        <i class="iconfont icon-duihao"></i><span>icon-disabled</span>
+      </button>
     </li>
   </ul>
 </section>
