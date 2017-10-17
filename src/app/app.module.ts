@@ -1,8 +1,9 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { AppComponent } from './app.component';
-import { routing } from './app.routing';
+import {AppComponent} from './app.component';
+import {routing} from './app.routing';
+import {NgKylinModule} from '../index.show';
 
 @NgModule({
   declarations: [
@@ -10,9 +11,11 @@ import { routing } from './app.routing';
   ],
   imports: [
     BrowserModule,
-    routing
+    routing,
+    NgKylinModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

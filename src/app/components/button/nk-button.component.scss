@@ -1,10 +1,16 @@
-@import '../styles/default';
+@import '../styles/default.scss';
 
 $widgetPrefix: 'btn';
 $prefix: #{$mainPrefix}-#{$widgetPrefix};
 $primary-btn: #{$prefix}-primary;
 $default-btn: #{$prefix}-default;
 $danger-btn: #{$prefix}-danger;
+$dashed-btn: #{$prefix}-dashed;
+
+$large-btn: #{$prefix}-large;
+$default-btn: #{$prefix}-defalut;
+$small-btn: #{$prefix}-small;
+
 .#{$prefix}, .#{$default-btn} {
   display: inline-block;
   border: 1px solid transparent;
@@ -40,11 +46,30 @@ $danger-btn: #{$prefix}-danger;
     box-shadow: 0 2px 2px rgba(10, 16, 20, .24), 0 0 2px rgba(10, 16, 20, .12);
   }
 }
+.#{$dashed-btn} {
+  border-style: dashed;
+  &:focus, &:hover {
+    color: #108ee9;
+    background-color: #fff;
+    border-color: #108ee9;
+    box-shadow: 0 2px 2px rgba(10,16,20,.24), 0 0 2px rgba(10,16,20,.12);
+  }
+}
 
 button[disabled], button[disabled]:focus, button[disabled]:hover {
   background-color: #f7f7f7;
   border-color: #d9d9d9;
   cursor: not-allowed;
   color: #d5d4d4;
-  box-shadow:none;
+  box-shadow: none;
+}
+
+.#{$large-btn} {
+  font-size: 16px;
+  padding: 12px 18px;
+}
+
+.#{$small-btn} {
+  font-size: 12px;
+  padding: 8px 12px;
 }
