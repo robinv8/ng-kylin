@@ -15,7 +15,6 @@
   "main": "./bundles/ng-kylin.umd.js",
   "module": "./esm5/index.js",
   "es2015": "./esm15/index.js",
-  "private": true,
   "dependencies": {
     "@angular/animations": "^4.0.0",
     "@angular/common": "^4.0.0",
