@@ -10,7 +10,7 @@ $dashed-btn: #{$prefix}-dashed;
 $large-btn: #{$prefix}-large;
 $default-btn: #{$prefix}-defalut;
 $small-btn: #{$prefix}-small;
-
+$circle-btn: #{$prefix}-circle;
 .#{$prefix}, .#{$default-btn} {
   display: inline-block;
   border: 1px solid transparent;
@@ -21,6 +21,13 @@ $small-btn: #{$prefix}-small;
   color: rgba(0, 0, 0, .65);
   background-color: #fff;
   border-color: #d9d9d9;
+  span {
+    margin-left: .5em;
+  }
+  &.#{$circle-btn}{
+    width: 36px;
+    height: 36px;
+  }
 }
 
 .#{$primary-btn} {
@@ -46,13 +53,14 @@ $small-btn: #{$prefix}-small;
     box-shadow: 0 2px 2px rgba(10, 16, 20, .24), 0 0 2px rgba(10, 16, 20, .12);
   }
 }
+
 .#{$dashed-btn} {
   border-style: dashed;
   &:focus, &:hover {
     color: #108ee9;
     background-color: #fff;
     border-color: #108ee9;
-    box-shadow: 0 2px 2px rgba(10,16,20,.24), 0 0 2px rgba(10,16,20,.12);
+    box-shadow: 0 2px 2px rgba(10, 16, 20, .24), 0 0 2px rgba(10, 16, 20, .12);
   }
 }
 
@@ -67,9 +75,28 @@ button[disabled], button[disabled]:focus, button[disabled]:hover {
 .#{$large-btn} {
   font-size: 16px;
   padding: 12px 18px;
+  &.#{$circle-btn}{
+    width: 40px;
+    height: 40px;
+    i{
+      font-size: 18px;
+    }
+  }
 }
 
 .#{$small-btn} {
   font-size: 12px;
   padding: 8px 12px;
+  &.#{$circle-btn}{
+    width: 32px;
+    height: 32px;
+    i{
+      font-size: 14px;
+    }
+  }
+}
+
+.#{$circle-btn} {
+  border-radius: 50%;
+  padding: 0;
 }

@@ -12,6 +12,7 @@ export class NkButtonComponent implements AfterContentInit {
   _prefixCls = 'ky-btn';
   _type: string;
   _size: string;
+  _shape: string;
   _classList: Array<string> = [];
 
   @Input()
@@ -34,6 +35,16 @@ export class NkButtonComponent implements AfterContentInit {
     this._setClass();
   }
 
+  @Input()
+  get nkShape() {
+    return this._shape;
+  }
+
+  set nkShape(value: string) {
+    this._shape = value;
+    this._setClass();
+  }
+
   constructor(private _elementRef: ElementRef, private _renderer: Renderer2) {
     this._el = this._elementRef.nativeElement;
     this.nativeElement = this._elementRef.nativeElement;
@@ -41,13 +52,14 @@ export class NkButtonComponent implements AfterContentInit {
   }
 
   ngAfterContentInit() {
-    console.log('测试成功~');
   }
 
   _setClass(): void {
+    console.log(this.nkShape);
     this._classList = [
       this.nkType && `${this._prefixCls}-${this.nkType}`,
-      this.nkSize && `${this._prefixCls}-${this.nkSize}`
+      this.nkSize && `${this._prefixCls}-${this.nkSize}`,
+      this.nkShape && `${this._prefixCls}-${this.nkShape}`
     ].filter(item => {
       return item;
     });
