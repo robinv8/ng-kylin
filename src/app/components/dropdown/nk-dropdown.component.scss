@@ -1,0 +1,49 @@
+@import "../styles/default";
+
+$widgetPrefix: 'dropdown';
+$prefix: #{$mainPrefix}-#{$widgetPrefix};
+.#{$prefix} {
+  position: relative;
+  .#{$prefix}-link {
+    height: 40px;
+    line-height: 40px;
+    background: transparent;
+    text-decoration: none;
+    cursor: pointer;
+    padding-left: 11px;
+    color: #999999;
+    font-size: 14px;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .#{$prefix}-trigger{
+    .iconfont{
+      margin-left: .3em;
+    }
+  }
+  .#{$mainPrefix}-menu {
+    min-width: 107px;
+    border-radius: 5px 5px 5px 5px;
+    position: absolute;
+    left: 0;
+    display: inline-block;
+    margin-top: 40px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, .2);
+    background-color: white;
+    z-index: 100;
+    .nk-menu-item {
+      height: 30px;
+      line-height: 30px;
+      padding-left: 11px;
+      color: #999999;
+      font-size: 14px;
+      cursor: pointer;
+      &:hover {
+        background-color: rgba(236, 246, 253, 1);
+      }
+    }
+  }
+}
+

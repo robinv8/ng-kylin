@@ -6,12 +6,4 @@ html, body {
   height: 100%;
 }
 
-.content {
-  position: absolute;
-  top:72px;
-  margin-left: 260px;
-  height: 100%;
-  width: calc(100% - 260px);
-  padding: 30px;
-}
 
