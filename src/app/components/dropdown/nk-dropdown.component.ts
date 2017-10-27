@@ -70,7 +70,7 @@ export class NkDropdownComponent implements AfterContentInit {
         });
         const disposeDocument = this.renderer.listen(document, 'click', (e) => {
           observer.next(false);
-        })
+        });
         return () => {
           dispose();
           disposeDocument();
