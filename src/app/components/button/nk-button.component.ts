@@ -9,7 +9,7 @@ import {Component, Renderer2, ElementRef, AfterContentInit, ViewEncapsulation, I
 export class NkButtonComponent implements AfterContentInit {
   _el: HTMLElement;
   nativeElement: HTMLElement;
-  _prefixCls = 'ky-btn';
+  _prefixCls = 'nk-btn';
   _type: string;
   _size: string;
   _shape: string;
@@ -47,7 +47,6 @@ export class NkButtonComponent implements AfterContentInit {
 
   constructor(private _elementRef: ElementRef, private _renderer: Renderer2) {
     this._el = this._elementRef.nativeElement;
-    this.nativeElement = this._elementRef.nativeElement;
     this._renderer.addClass(this._el, this._prefixCls);
   }
 
@@ -55,7 +54,6 @@ export class NkButtonComponent implements AfterContentInit {
   }
 
   _setClass(): void {
-    console.log(this.nkShape);
     this._classList = [
       this.nkType && `${this._prefixCls}-${this.nkType}`,
       this.nkSize && `${this._prefixCls}-${this.nkSize}`,
@@ -63,7 +61,6 @@ export class NkButtonComponent implements AfterContentInit {
     ].filter(item => {
       return item;
     });
-
     this._classList.forEach(_className => {
       this._renderer.addClass(this._el, _className);
     });

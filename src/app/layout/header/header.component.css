@@ -9,6 +9,7 @@
   left: 0;
   background-color: #51b3f2 !important;
   margin-left: 260px;
+  z-index: 100;
 }
 
 .header-bar {

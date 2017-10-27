@@ -1,0 +1,13 @@
+<div class="nk-dropdown">
+  <ng-content></ng-content>
+  <ul class="nk-menu" *ngIf="isShow"
+      (mouseenter)="_onMouseEnterEvent($event)"
+      (mouseleave)="_onMouseLeaveEvent($event)">
+    <li class="nk-menu-item" *ngFor="let item of datas" data-value="{{item.value}}" (click)="_getValue(item.value)">
+      {{item.label}}
+    </li>
+  </ul>
+</div>
+
+
+
