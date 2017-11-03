@@ -64,9 +64,17 @@ export class NkDropdownComponent implements AfterContentInit {
       mouse$ = Observable.create((observer: Observer<boolean>) => {
         const dispose = this.renderer.listen(this._nkOrigin.elementRef.nativeElement, 'click', (e) => {
           e.preventDefault();
+          // 阻止事件穿透
+          e.stopPropagation();
           observer.next(true);
         });
-        return () => dispose();
+        const disposeDocument = this.renderer.listen(document, 'click', (e) => {
+          observer.next(false);
+        });
+        return () => {
+          dispose();
+          disposeDocument();
+        };
       });
     }
     mouse$
